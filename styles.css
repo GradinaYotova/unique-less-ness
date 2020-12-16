@@ -8,17 +8,23 @@
   src: url(font/KernStandard.otf);
 }
 
-body{
+@font-face {
+  font-family: myFontThree;
+  src: url(font/KernItalic.otf);
+}
 
+html,body{
   margin:0;
-  background-color:#000;
-  overflow-x:hidden;
+  width:100%;
+  height:100%;
   position: relative;
+  overflow-x:hidden;
+  background-color:#000;
 }
 
 .buttons{
   background-color: transparent;
-  position: fixed;
+  position: absolute;
   top:0%;
   left: 0%;
   width: 20%;
@@ -35,10 +41,12 @@ body{
   filter:blur(2px);
   color:#E8E8E8;
   font-family:myFontTwo;
+  cursor: pointer;
 }
 
 .indexTrigger.active{
 filter:blur(0px);
+text-decoration: underline;
 }
 
 .indexTrigger:focus {
@@ -47,6 +55,7 @@ filter:blur(0px);
 
 .indexTrigger:hover {
   filter:blur(0px);
+  text-decoration: underline;
 }
 
 .aboutTrigger{
@@ -57,10 +66,12 @@ filter:blur(0px);
  border: none;
  filter:blur(3px);
  color:#E8E8E8;
+ cursor: pointer;
 }
 
 .aboutTrigger.active{
   filter:blur(0px);
+  text-decoration: underline;
 }
 
 .aboutTrigger:focus {
@@ -70,12 +81,12 @@ filter:blur(0px);
 .aboutTrigger:hover {
 
   filter:blur(0px);
+  text-decoration: underline;
 }
 
 .index{
   position: absolute;
   width: 95vw;
-/*  padding: 20px 10px;*/
   top: 0;
   left: 0;
   visibility: hidden;
@@ -95,7 +106,6 @@ filter:blur(0px);
 .aboutView{
   position: absolute;
   width: 95vw;
-/*  padding: 20px 10px;*/
   top: 0;
   left: 0;
   z-index: 0;
@@ -118,7 +128,7 @@ filter:blur(0px);
 .container{
   width:100%;
   height:100vh;
-  margin-left:2%;
+  margin-left:1%;
   position:absolute;
 }
 
@@ -251,7 +261,7 @@ filter:blur(0px);
 }
 
 .flip-box-container.twentyfive{
-  top:280%;
+  top:290%;
   left:40%;
 }
 
@@ -283,6 +293,7 @@ filter:blur(0px);
 
 .flip-box:hover .flip-box-inner {
   transform: rotateY(180deg);
+  
 }
 
 .flip-box-front, .flip-box-back {
@@ -303,21 +314,28 @@ filter:blur(0px);
   transform: rotateY(180deg);
 }
 
+.title{
+  width:100%;
+  margin-left:25%;
+}
+
 h1{
   position: relative;
   margin:0;
-  margin-left:25%;
   top:0;
   width: 100%;
-  font-family:myFont;
+  font-family:myFontTwo;
   color:#E8E8E8;
   font-size:7em;
   z-index:10;
  }
 
+ h1:hover{
+  font-family:myFont;
+ }
+
 .video{
-  margin-left:2.5%;
-  margin-top:5%;
+  margin-left:2.7%;
 }
 
 .video:focus {
@@ -325,36 +343,63 @@ h1{
 }
 
 
+.swiper{
+  margin-left:7%;
+}
+
 .swiper-container {
-      width: 30%;
-      height: 30%;
-      pointer-events: all;
-    }
+  width: 49%;
+  height: 49%;
+  display:inline-block;
+}
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
 
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-    }
+.swiper-button-next{
+  color:#fff;
+}
 
-    .swiper-button-next{
-      pointer-events:all;
-    }
+.swiper-button-prev{
+  color:#fff;
+}
 
-    .swiper-button-prev{
-      pointer-events:all;
-    }
+#about{
+  color:#fff;
+  font-family:myFontTwo;
+  font-size:1.1em;
+  margin-left:2.5%;
+  padding:0.5%;
+  width:100%;
+  column-count: 3;
+  letter-spacing: 0.01em;
+}
+
+#moving-image{
+  color:#404040;
+  font-family:myFontThree;
+  font-size:1.2em;
+  padding:0.5%;
+  margin-left:2.5%;
+}
+
+#logbook{
+  color:#404040;
+  font-family:myFontThree;
+  padding:0.5%;
+  margin-left:2.5%;
+}
+
+
