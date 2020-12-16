@@ -334,14 +334,9 @@ h1{
   font-family:myFont;
  }
 
-.video{
+.movie{
   margin-left:2.7%;
 }
-
-.video:focus {
-  outline:none;
-}
-
 
 .swiper{
   margin-left:7%;
