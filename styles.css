@@ -384,11 +384,17 @@ h1{
   color:#fff;
   font-family:myFontTwo;
   font-size:1.1em;
-  margin-left:2.5%;
-  padding:0.5%;
-  width:100%;
-  column-count: 3;
+  margin-top:2%;
+  margin-left:10%;
+  width:50%;
+  column-count: 1;
+  column-gap: 5%;
+  break-after: auto;
   letter-spacing: 0.01em;
+}
+
+#about > p:first-child {
+  margin-top: 0;
 }
 
 #moving-image{
@@ -396,14 +402,14 @@ h1{
   font-family:myFontThree;
   font-size:1.2em;
   padding:0.5%;
-  margin-left:2.5%;
+  margin-left:10%;
 }
 
 #logbook{
   color:#404040;
   font-family:myFontThree;
   padding:0.5%;
-  margin-left:2.5%;
+  margin-left:10%;
 }
 
 
